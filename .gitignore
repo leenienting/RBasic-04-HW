@@ -1,36 +1,45 @@
-# History files
-.Rhistory
-.Rapp.history
+#' iris 是一個很有名的資料集。
+#' 在R 的預設中，處理iris的Species欄位，也就是鳶尾花資料集時，使用的是factor型態。
+species <- iris$Species
 
-# Session Data files
-.RData
+#' 請問species共有哪幾種類別？（答案應該是一個character vector）
+answer1 <- levels(species)
 
-# Example code in package build process
-*-Ex.R
+#' 請問species的類別有無順序關係？
+answer2 <- FALSE
 
-# Output files from R CMD build
-/*.tar.gz
+#' CO2 是另一個範例數據。
+plant <- CO2$Plant
 
-# Output files from R CMD check
-/*.Rcheck/
+#' 請問plant共有哪幾種類別？（答案應該是一個character vector）
+answer3 <- levels(plant)
 
-# RStudio files
-.Rproj.user/
+#' 請問plant的類別有無順序關係？
+answer4 <- TRUE
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
 
-# knitr and R markdown default cache directories
-/*_cache/
-/cache/
+#> factor(species)
+  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [11] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [21] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [31] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [41] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [51] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [61] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [71] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [81] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [91] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+[101] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[111] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[121] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[131] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[141] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+Levels: setosa versicolor virginica
 
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
 
-# Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
-rsconnect/
+#> factor(plant)
+ [1] Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn1 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn2 Qn3 Qn3 Qn3 Qn3 Qn3 Qn3 Qn3 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc1 Qc2
+[30] Qc2 Qc2 Qc2 Qc2 Qc2 Qc2 Qc3 Qc3 Qc3 Qc3 Qc3 Qc3 Qc3 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn1 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn2 Mn3 Mn3
+[59] Mn3 Mn3 Mn3 Mn3 Mn3 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc1 Mc2 Mc2 Mc2 Mc2 Mc2 Mc2 Mc2 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3 Mc3
+Levels: Qn1 < Qn2 < Qn3 < Qc1 < Qc3 < Qc2 < Mn3 < Mn2 < Mn1 < Mc2 < Mc3 < Mc1
